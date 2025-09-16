@@ -3,493 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kinky Tantrika - Transform Your Relationship with Yourself</title>
+    <title>Kinky Tantrika - Authentic Self & Love Coaching</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: #2c2c2c;
-            background: #faf9f7;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #6b7c6b;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #2c2c2c;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #c8956d;
-        }
-
-        .cta-button {
-            background: #c8956d;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 25px;
-            font-weight: bold;
-            text-decoration: none;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 15px rgba(200, 149, 109, 0.3);
-        }
-
-        .cta-button:hover {
-            background: #b8845d;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(200, 149, 109, 0.4);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: #f5f4f2;
-            padding: 120px 0 80px;
-            text-align: center;
-            margin-top: 80px;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            color: #2c2c2c;
-        }
-
-        .hero .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            color: #555;
-            font-style: italic;
-        }
-
-        .hero .description {
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            color: #666;
-        }
-
-        /* Gift Session Box */
-        .gift-session {
-            background: #6b7c6b;
-            color: white;
-            padding: 40px;
-            border-radius: 20px;
-            text-align: center;
-            margin: 60px auto;
-            max-width: 500px;
-            box-shadow: 0 10px 30px rgba(107, 124, 107, 0.2);
-        }
-
-        .gift-session h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .gift-session .price {
-            font-size: 3rem;
-            font-weight: bold;
-            margin: 1rem 0;
-        }
-
-        .gift-session .duration {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #2c2c2c;
-        }
-
-        .service-packages {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-
-        .package {
-            background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            text-align: center;
-            border: 2px solid #e8e6e3;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .package:hover {
-            border-color: #c8956d;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .package h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: #6b7c6b;
-        }
-
-        .package .price {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #2c2c2c;
-            margin-bottom: 1rem;
-        }
-
-        .package .duration {
-            color: #666;
-            margin-bottom: 2rem;
-        }
-
-        .package ul {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-
-        .package li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .package li:last-child {
-            border-bottom: none;
-        }
-
-        /* About Section */
-        .about {
-            padding: 80px 0;
-            background: #f5f4f2;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #2c2c2c;
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            color: #555;
-        }
-
-        .credentials {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            margin-top: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .credentials h4 {
-            color: #d4af37;
-            margin-bottom: 1rem;
-        }
-
-        .credentials ul {
-            list-style-type: none;
-        }
-
-        .credentials li {
-            padding: 0.5rem 0;
-            border-left: 3px solid #d4af37;
-            padding-left: 1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .testimonial {
-            background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border: 1px solid #e8e6e3;
-        }
-
-        .testimonial h4 {
-            color: #6b7c6b;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .testimonial p {
-            font-style: italic;
-            color: #555;
-            line-height: 1.8;
-        }
-
-        .client-name {
-            text-align: right;
-            font-weight: bold;
-            color: #2c2c2c;
-            margin-top: 1rem;
-        }
-
-        /* Footer */
-        footer {
-            background: #2c2c2c;
-            color: white;
-            text-align: center;
-            padding: 3rem 0;
-        }
-
-        .footer-content h3 {
-            color: #c8956d;
-            margin-bottom: 1rem;
-        }
-
-        .footer-tagline {
-            font-style: italic;
-            margin-bottom: 2rem;
-            font-size: 1.2rem;
-        }
-
-        .contact-info {
-            margin-bottom: 2rem;
-        }
-
-        .contact-info a {
-            color: #d4af37;
-            text-decoration: none;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero .subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .service-packages {
-                grid-template-columns: 1fr;
-            }
-            
-            .testimonial-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-on-scroll {
-            animation: fadeInUp 0.8s ease-out;
+        .hero-bg {
+            background: linear-gradient(rgba(107, 124, 107, 0.1), rgba(107, 124, 107, 0.1)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600"><rect fill="%23f8f9fa" width="1000" height="600"/><circle fill="%236b7c6b" opacity="0.1" cx="200" cy="150" r="100"/><circle fill="%23c8956d" opacity="0.1" cx="800" cy="400" r="150"/></svg>');
+            background-size: cover;
+            background-position: center;
         }
     </style>
 </head>
-<body>
+<body class="font-sans">
     <!-- Header -->
-    <header>
-        <nav class="container">
-            <div class="logo">Kinky Tantrika</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-            </ul>
-            <a href="#contact" class="cta-button">Start Your Transformation</a>
-        </nav>
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-8 py-6">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-green-800">Kinky Tantrika</h1>
+                </div>
+                <nav class="hidden md:flex space-x-12">
+                    <a href="#services" class="text-green-800 hover:text-orange-400 transition duration-300 py-2">Services</a>
+                    <a href="#testimonials" class="text-green-800 hover:text-orange-400 transition duration-300 py-2">Testimonials</a>
+                    <a href="#faq" class="text-green-800 hover:text-orange-400 transition duration-300 py-2">FAQ</a>
+                    <a href="mailto:your-email@example.com" class="bg-orange-400 text-white px-6 py-3 rounded-lg hover:bg-orange-500 transition duration-300">Book Discovery Session</a>
+                </nav>
+            </div>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Transform Your Relationship with Yourself</h1>
-            <p class="subtitle">Discover Unshakeable Confidence & Authentic Self-Love</p>
-            <p class="description">
-                Break free from patterns that keep you stuck. Develop the deep self-love and authentic confidence that creates the relationships and life you truly desire.
-            </p>
-            <a href="#services" class="cta-button">Explore Your Journey</a>
-        </div>
-    </section>
-
-    <!-- Gift Session -->
-    <section class="container">
-        <div class="gift-session">
-            <h3>Discovery Session</h3>
-            <div class="price">FREE</div>
-            <div class="duration">60 Minutes</div>
-            <p>Explore if we're a perfect fit for your transformation journey</p>
-            <a href="#contact" class="cta-button">Schedule Your Session</a>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Authentic Self & Love Coaching</h2>
-            <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto;">
-                Personalized coaching journeys designed to help you heal relationship patterns, develop unshakeable self-worth, and create authentic connections that fulfill you.
-            </p>
-            
-            <div class="service-packages">
-                <div class="package">
-                    <h3>Foundation Journey</h3>
-                    <div class="price">$1,800</div>
-                    <div class="duration">3 Months • 6 Sessions</div>
-                    <ul>
-                        <li>✨ Bi-weekly 90-minute sessions</li>
-                        <li>✨ Inner child healing work</li>
-                        <li>✨ Confidence-building practices</li>
-                        <li>✨ Body awareness techniques</li>
-                        <li>✨ Personalized homework assignments</li>
-                        <li>✨ Email support between sessions</li>
-                    </ul>
-                    <a href="#contact" class="cta-button">Begin Your Journey</a>
+    <section class="hero-bg py-24">
+        <div class="container mx-auto px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-5xl font-bold text-green-800 mb-8">Transform Your Relationship with Yourself, Transform Your Life</h2>
+                <p class="text-xl text-gray-700 mb-12 leading-relaxed px-4">
+                    Develop unshakeable self-love and authentic confidence. Break free from patterns that keep you stuck. 
+                    Create the deep, fulfilling relationships you truly desire.
+                </p>
+                <div class="space-y-6 sm:space-y-0 sm:space-x-6 sm:flex sm:justify-center">
+                    <a href="mailto:your-email@example.com" class="block sm:inline-block bg-orange-400 text-white px-10 py-5 rounded-lg text-lg font-semibold hover:bg-orange-500 transition duration-300">
+                        Book Your Free Discovery Session
+                    </a>
                 </div>
-
-                <div class="package">
-                    <h3>Deep Transformation</h3>
-                    <div class="price">$3,200</div>
-                    <div class="duration">6 Months • 12 Sessions</div>
-                    <ul>
-                        <li>✨ Bi-weekly 90-minute sessions</li>
-                        <li>✨ Complete pattern transformation</li>
-                        <li>✨ Advanced self-love practices</li>
-                        <li>✨ Relationship readiness coaching</li>
-                        <li>✨ Tantric breathwork & movement</li>
-                        <li>• Email support between sessions</li>
-                        <li>✨ Personalized resource library</li>
-                    </ul>
-                    <a href="#contact" class="cta-button">Transform Deeply</a>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #f5f4f2; border-radius: 15px;">
-                <h4 style="color: #6b7c6b; margin-bottom: 1rem;">Optional Add-On</h4>
-                <p style="font-size: 1.1rem;"><strong>Text Support:</strong> $200/month - Stay connected between sessions with personalized guidance, check-ins, and encouragement via text.</p>
-            </div>
-
-            <div style="text-align: center; margin-top: 2rem; padding: 2rem; background: #fff8f0; border-radius: 10px; border-left: 5px solid #c8956d;">
-                <p style="font-style: italic; color: #8b6914;"><strong>Investment Policy:</strong> All coaching packages require full commitment and payment. Because transformation requires consistency and dedicated time together, refunds are not available. Your investment reflects my complete dedication to your growth journey.</p>
+                <p class="text-sm text-gray-600 mt-6">30-minute complimentary consultation • No obligation</p>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <!-- Placeholder for your professional photo -->
-                    <div style="height: 400px; background: #6b7c6b; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
-                        Your Professional Photo Here
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-6">
+                        <h2 class="text-3xl font-bold text-green-800 mb-8">I'm Kinky Tantrika</h2>
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            For over 20 years, I've guided people toward authentic self-love and deeper connections. 
+                            As a certified Sex, Love & Relationship Coach trained by Layla Martin, I combine evidence-based 
+                            coaching with body awareness, energy work, and tantric principles.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            I work with carefully selected individuals who are ready for real transformation - not quick fixes, 
+                            but deep, lasting change that radiates into every area of their lives.
+                        </p>
+                        
+                        <div class="bg-gray-50 p-8 rounded-lg mt-8">
+                            <h3 class="font-bold text-green-800 mb-6 text-xl">Credentials & Training:</h3>
+                            <div class="space-y-3 text-gray-700">
+                                <p class="flex items-start"><span class="mr-3 mt-1">✨</span> Certified Sex, Love & Relationship Coach (Layla Martin Institute)</p>
+                                <p class="flex items-start"><span class="mr-3 mt-1">✨</span> Licensed Massage Therapist with 20+ years experience</p>
+                                <p class="flex items-start"><span class="mr-3 mt-1">✨</span> Certified Energy Worker (Reiki & Advanced Healing Modalities)</p>
+                                <p class="flex items-start"><span class="mr-3 mt-1">✨</span> 20+ Years in Education & Curriculum Development</p>
+                                <p class="flex items-start"><span class="mr-3 mt-1">✨</span> 30+ Carefully Selected Clients with Deep Transformation Results</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 h-96 rounded-lg flex items-center justify-center">
+                        <p class="text-gray-500">[Your Professional Photo Here]</p>
                     </div>
                 </div>
-                <div class="about-text">
-                    <h2>Meet Kinky Tantrika</h2>
-                    <p>
-                        I'm here to help you fall deeply in love with who you are. As a certified Sex, Love & Relationship Coach trained by Layla Martin, I specialize in guiding individuals through profound self-discovery and authentic confidence building. Having worked intensively with 30+ carefully selected clients over 3 years, I'm highly selective about who I choose to work with to ensure the deepest possible transformation.
-                    </p>
-                    <p>
-                        My approach combines deep questioning, body awareness, breathwork, and energy work to help you heal old patterns and create the unshakeable self-love that transforms everything. Each client receives my complete dedication and personalized attention throughout their journey of becoming authentically confident and magnetic.
-                    </p>
-                    <p>
-                        Whether you're healing from past relationships, wanting to attract conscious partnership, or simply ready to love yourself fully, I create a safe, non-judgmental space for your authentic exploration and growth.
-                    </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-8">
+            <h2 class="text-3xl font-bold text-center text-green-800 mb-6">Authentic Self & Love Coaching</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-3xl mx-auto text-lg leading-relaxed">
+                Deep transformation work for individuals ready to break free from limiting patterns and create 
+                authentic, fulfilling relationships starting with themselves.
+            </p>
+            
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 mb-16">
+                <!-- 3-Month Package -->
+                <div class="bg-white p-10 rounded-lg shadow-sm border border-gray-200">
+                    <h3 class="text-2xl font-bold text-green-800 mb-6">3-Month Deep Dive</h3>
+                    <div class="text-3xl font-bold text-orange-400 mb-6">$1,800</div>
+                    <p class="text-gray-600 mb-8 text-lg">Perfect for focused transformation work</p>
                     
-                    <div class="credentials">
-                        <h4>Credentials & Training</h4>
-                        <ul>
-                            <li>Certified Sex, Love & Relationship Coach (Layla Martin Institute)</li>
-                            <li>Licensed Massage Therapist & Reflexology Specialist</li>
-                            <li>Certified Energy Worker (Reiki & Advanced Healing Modalities)</li>
-                            <li>20+ Years Education & Curriculum Development</li>
-                            <li>30+ Deep Transformation Partnerships (Highly Selective Client Practice)</li>
+                    <div class="space-y-4 mb-10">
+                        <div class="flex items-center">
+                            <span class="text-green-600 mr-4 text-lg">✓</span>
+                            <span class="text-lg">6 biweekly sessions (60-90 minutes each)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-green-600 mr-4 text-lg">✓</span>
+                            <span class="text-lg">Personalized transformation plan</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-green-600 mr-4 text-lg">✓</span>
+                            <span class="text-lg">Custom exercises and homework assignments</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-green-600 mr-4 text-lg">✓</span>
+                            <span class="text-lg">Email support between sessions</span>
+                        </div>
+                    </div>
+                    
+                    <a href="mailto:your-email@example.com" class="block w-full bg-orange-400 text-white text-center px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 transition duration-300 text-lg">
+                        Book Discovery Session
+                    </a>
+                </div>
+
+                <!-- 6-Month Package -->
+                <div class="bg-white p-10 rounded-lg shadow-sm border-2 border-orange-400 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-orange-400 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                    </div>
+                    <h3 class="text-2xl font-bold text-green-800 mb-6">6-Month Transformation</h3>
+                    <div class="text-3xl font-bold text-orange-400 mb-6">$3,200</div>
+                    <p class="text-gray-600 mb-8 text-lg">Comprehensive journey to lasting change</p>
+                    
+                    <div class="space-y-4 mb-10">
+                        <div class="flex items-center">
+                            <span class="text-green-600 mr-4 text-lg">✓</span>
+                            <span class="text-lg">12 biweekly sessions (60-90 minutes each)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-green-600 mr-4 text-lg">✓</span>
+                            <span class="text-lg">Comprehensive transformation roadmap</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-green-600 mr-4 text-lg">✓</span>
+                            <span class="text-lg">Advanced body awareness and nervous system work</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-green-600 mr-4 text-lg">✓</span>
+                            <span class="text-lg">Email support between sessions</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-green-600 mr-4 text-lg">✓</span>
+                            <span class="text-lg">Priority scheduling and extended session options</span>
+                        </div>
+                    </div>
+                    
+                    <a href="mailto:your-email@example.com" class="block w-full bg-orange-400 text-white text-center px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 transition duration-300 text-lg">
+                        Book Discovery Session
+                    </a>
+                </div>
+            </div>
+
+            <!-- Add-on Services -->
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-sm mb-16">
+                <h3 class="text-xl font-bold text-green-800 mb-6">Optional Add-On</h3>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h4 class="font-semibold text-gray-800 text-lg mb-2">Text Support Between Sessions</h4>
+                        <p class="text-gray-600 text-lg">Share insights, ask questions, receive guidance (24-48 hour response)</p>
+                    </div>
+                    <div class="text-xl font-bold text-orange-400">+$200/month</div>
+                </div>
+            </div>
+
+            <!-- What You'll Experience -->
+            <div class="max-w-4xl mx-auto mt-12">
+                <h3 class="text-2xl font-bold text-green-800 mb-8 text-center">What You'll Experience</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-green-800 mb-4">My Approach Includes:</h4>
+                        <ul class="space-y-2">
+                            <li>✨ Deep inner child healing and self-compassion practices</li>
+                            <li>✨ Body awareness and nervous system regulation techniques</li>
+                            <li>✨ Authentic communication and boundary-setting skills</li>
+                            <li>✨ Personalized exercises and homework assignments</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-green-800 mb-4">Transformation Results:</h4>
+                        <ul class="space-y-2">
+                            <li>✨ Transform limiting beliefs into empowering truths</li>
+                            <li>✨ Develop authentic confidence that attracts quality relationships</li>
+                            <li>✨ Create clear boundaries that honor your needs</li>
+                            <li>✨ Master communication skills for difficult conversations</li>
                         </ul>
                     </div>
                 </div>
@@ -498,103 +205,130 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Transformation Stories</h2>
-            <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 3rem;">
-                Real results from real people who chose to invest in their self-love journey
-            </p>
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-green-800 mb-12">Client Transformations</h2>
             
-            <div class="testimonial-grid">
-                <div class="testimonial">
-                    <h4>From Insecurity to Magnetic Confidence</h4>
-                    <p>
-                        "I came to Kinky Tantrika feeling lost after being fired from my job and struggling with dating. Through our 6 months together, I discovered deep confidence I never knew I had. I explored old wounds, found my voice, and completely transformed how I show up in the world. Now I have two amazing partners in a polyamorous relationship, I'm thriving professionally, and people are drawn to my energy in ways that never happened before. The sexual confidence and authentic self-love I've developed has changed everything."
-                    </p>
-                    <div class="client-name">- Professional, 30s</div>
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="mb-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-orange-400 rounded-full flex items-center justify-center text-white font-bold">
+                                B
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-green-800">B., Business Professional</h4>
+                                <p class="text-gray-600">6-Month Transformation Journey</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            "When I started working with Kinky Tantrika, I was struggling with confidence both personally and professionally. After our 6 months together, I've experienced a complete transformation. I now have two loving relationships, I'm exploring new hobbies, and people actually approach ME now. The confidence I've gained shows up in every conversation I have."
+                        </p>
+                    </div>
+                    <div class="text-sm text-gray-600">
+                        <strong>Key Results:</strong> Gained authentic confidence, improved professional presence, created fulfilling relationships, developed new interests
+                    </div>
                 </div>
 
-                <div class="testimonial">
-                    <h4>From Stuck to Powerfully Free</h4>
-                    <p>
-                        "Working with Kinky Tantrika gave me the courage to leave a marriage that wasn't serving me and discover who I really am. In 6 months, I found my strength, got back into fitness and hobbies I love, and learned to trust my instincts with dating. I can spot red flags immediately now and move on with love and confidence. The relationship skills I learned led me to an incredible partnership where we practice true intimacy and communicate beautifully. I finally know what it feels like to be completely myself and be loved for it."
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="mb-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-orange-400 rounded-full flex items-center justify-center text-white font-bold">
+                                S
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-green-800">S., Creative Professional</h4>
+                                <p class="text-gray-600">6-Month Deep Transformation</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            "I came to Kinky Tantrika during a difficult time - questioning my marriage and feeling lost. Through our work together, I gained incredible clarity about who I am and what I want. I made the difficult decision to leave my marriage, but with such love and grace. I'm now with an amazing partner who truly sees me, and I'm happier than I've ever been."
+                        </p>
+                    </div>
+                    <div class="text-sm text-gray-600">
+                        <strong>Key Results:</strong> Gained self-clarity, made empowered life decisions, attracted aligned partnership, rediscovered joy and self-expression
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="mailto:your-email@example.com" class="bg-orange-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-500 transition duration-300">
+                    Start Your Transformation Journey
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-green-800 mb-12">Frequently Asked Questions</h2>
+            
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-green-800 mb-3">What is the process for working with you?</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        We begin with a complimentary 30-minute Discovery Session where we explore your goals and determine if we're a good fit. If we decide to move forward, you'll choose your coaching package (3 or 6 months), sign your commitment contract, and we'll schedule your biweekly sessions. Each 60-90 minute session focuses on deep questioning, body awareness exercises, and practical tools for transformation. You'll receive personalized homework assignments between sessions to accelerate your growth.
                     </p>
-                    <div class="client-name">- Creative Professional, 40s</div>
                 </div>
 
-                <div class="testimonial">
-                    <h4>Self-Love That Radiates</h4>
-                    <p>
-                        "The inner child work and body awareness techniques completely shifted how I see myself. I went from constant self-criticism to giving myself affirmations naturally throughout the day. The confidence and self-love I've developed affects every area of my life - work, friendships, dating, everything. I finally understand what it means to be enough exactly as I am."
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-green-800 mb-3">How do you select clients to work with?</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        I'm highly selective and work with people who are genuinely ready for deep transformation. During our Discovery Session, I assess your commitment level, openness to change, and alignment with my coaching approach. I only accept clients who are prepared to do the inner work required for lasting change. This ensures the best outcomes for everyone involved.
                     </p>
-                    <div class="client-name">- Entrepreneur, 35</div>
                 </div>
 
-                <div class="testimonial">
-                    <h4>Authentic Communication Breakthrough</h4>
-                    <p>
-                        "Learning to feel sensations in my body and give them voice was life-changing. I used to let things build up until I exploded. Now I can communicate my true desires and boundaries in the moment with love and clarity. My relationships are deeper and more honest than ever before."
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-green-800 mb-3">What can I expect in our sessions?</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Our sessions are not traditional therapy where you talk about your week. Instead, we dive deep into your patterns, beliefs, and goals through targeted questioning. I'll guide you through body awareness exercises, breathing techniques, and help you identify where emotions live in your body. You'll leave each session with specific practices and assignments designed for your unique journey.
                     </p>
-                    <div class="client-name">- Healthcare Professional, 42</div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-green-800 mb-3">Do you offer refunds?</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        No, I don't offer refunds because you can't refund my time, energy, and the deep work we'll do together. Transformation requires commitment and consistency. The no-refund policy ensures you're fully invested in your growth process. This commitment to showing up for yourself is part of what creates lasting change.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-green-800 mb-3">What if I miss a scheduled session?</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        If you give advance notice and need to reschedule, we can work together to find a new time. However, if you simply miss a scheduled session without notice, that session is forfeited. This policy supports your commitment to yourself and respects the time we've both set aside for your transformation.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-green-800 mb-3">How is text support different from sessions?</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Text support allows you to share insights, ask questions, and receive guidance between sessions. I respond within 24-48 hours with thoughtful feedback, mini-exercises, or clarifications. This keeps your momentum going and provides support when you're processing between our biweekly meetings.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-green-800 mb-3">How do I know if this work is right for me?</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        This work is ideal if you're tired of surface-level changes and ready for deep transformation. You should be open to examining your patterns, willing to do homework assignments, and committed to showing up consistently. If you're looking for quick fixes or aren't ready to look deeply at yourself, this probably isn't the right fit.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer/Contact -->
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <h3>Kinky Tantrika Coaching</h3>
-                <p class="footer-tagline">
-                    "Transform your relationship with yourself, transform your life"
-                </p>
-                <div class="contact-info">
-                    <p>Ready to begin your transformation journey?</p>
-                    <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-                    <p>Schedule your free Discovery Session to explore if we're the perfect fit</p>
-                </div>
-                <a href="#" class="cta-button">Schedule Discovery Session</a>
-                <p style="margin-top: 2rem; font-size: 0.9rem; color: #999;">
-                    © 2024 Kinky Tantrika Coaching. All rights reserved.
-                </p>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-xl font-bold mb-4">Ready to Transform Your Relationship with Yourself?</h3>
+            <p class="mb-6">Book your complimentary Discovery Session today</p>
+            <a href="mailto:your-email@example.com" class="bg-orange-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-500 transition duration-300">
+                Start Your Journey
+            </a>
+            <div class="mt-8 pt-8 border-t border-gray-700">
+                <p>&copy; 2024 Kinky Tantrika. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-on-scroll');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all sections
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-    </script>
 </body>
 </html>
