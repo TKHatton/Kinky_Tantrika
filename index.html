@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinky Tantrika - Transform Your Relationship with Yourself</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c2c2c;
+            background: #faf9f7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #6b7c6b;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c2c2c;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #c8956d;
+        }
+
+        .cta-button {
+            background: #c8956d;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(200, 149, 109, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #b8845d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(200, 149, 109, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #f5f4f2;
+            padding: 120px 0 80px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #2c2c2c;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #555;
+            font-style: italic;
+        }
+
+        .hero .description {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #666;
+        }
+
+        /* Gift Session Box */
+        .gift-session {
+            background: #6b7c6b;
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 60px auto;
+            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(107, 124, 107, 0.2);
+        }
+
+        .gift-session h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .gift-session .price {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .gift-session .duration {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c2c2c;
+        }
+
+        .service-packages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .package {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 2px solid #e8e6e3;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .package:hover {
+            border-color: #c8956d;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .package h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #6b7c6b;
+        }
+
+        .package .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2c2c2c;
+            margin-bottom: 1rem;
+        }
+
+        .package .duration {
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .package ul {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .package li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .package li:last-child {
+            border-bottom: none;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background: #f5f4f2;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2c2c2c;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .credentials {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .credentials h4 {
+            color: #d4af37;
+            margin-bottom: 1rem;
+        }
+
+        .credentials ul {
+            list-style-type: none;
+        }
+
+        .credentials li {
+            padding: 0.5rem 0;
+            border-left: 3px solid #d4af37;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #e8e6e3;
+        }
+
+        .testimonial h4 {
+            color: #6b7c6b;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .client-name {
+            text-align: right;
+            font-weight: bold;
+            color: #2c2c2c;
+            margin-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c2c2c;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content h3 {
+            color: #c8956d;
+            margin-bottom: 1rem;
+        }
+
+        .footer-tagline {
+            font-style: italic;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+
+        .contact-info a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .service-packages {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">Kinky Tantrika</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+            </ul>
+            <a href="#contact" class="cta-button">Start Your Transformation</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Transform Your Relationship with Yourself</h1>
+            <p class="subtitle">Discover Unshakeable Confidence & Authentic Self-Love</p>
+            <p class="description">
+                Break free from patterns that keep you stuck. Develop the deep self-love and authentic confidence that creates the relationships and life you truly desire.
+            </p>
+            <a href="#services" class="cta-button">Explore Your Journey</a>
+        </div>
+    </section>
+
+    <!-- Gift Session -->
+    <section class="container">
+        <div class="gift-session">
+            <h3>Discovery Session</h3>
+            <div class="price">FREE</div>
+            <div class="duration">60 Minutes</div>
+            <p>Explore if we're a perfect fit for your transformation journey</p>
+            <a href="#contact" class="cta-button">Schedule Your Session</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Authentic Self & Love Coaching</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto;">
+                Personalized coaching journeys designed to help you heal relationship patterns, develop unshakeable self-worth, and create authentic connections that fulfill you.
+            </p>
+            
+            <div class="service-packages">
+                <div class="package">
+                    <h3>Foundation Journey</h3>
+                    <div class="price">$1,800</div>
+                    <div class="duration">3 Months • 6 Sessions</div>
+                    <ul>
+                        <li>• Bi-weekly 90-minute sessions</li>
+                        <li>• Inner child healing work</li>
+                        <li>• Confidence-building practices</li>
+                        <li>• Body awareness techniques</li>
+                        <li>• Personalized homework assignments</li>
+                        <li>• Email support between sessions</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Begin Your Journey</a>
+                </div>
+
+                <div class="package">
+                    <h3>Deep Transformation</h3>
+                    <div class="price">$3,200</div>
+                    <div class="duration">6 Months • 12 Sessions</div>
+                    <ul>
+                        <li>✨ Bi-weekly 90-minute sessions</li>
+                        <li>✨ Complete pattern transformation</li>
+                        <li>✨ Advanced self-love practices</li>
+                        <li>✨ Relationship readiness coaching</li>
+                        <li>✨ Tantric breathwork & movement</li>
+                        <li>• Email support between sessions</li>
+                        <li>✨ Personalized resource library</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Transform Deeply</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #f5f4f2; border-radius: 15px;">
+                <h4 style="color: #6b7c6b; margin-bottom: 1rem;">Optional Add-On</h4>
+                <p style="font-size: 1.1rem;"><strong>Text Support:</strong> $200/month - Stay connected between sessions with personalized guidance, check-ins, and encouragement via text.</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem; padding: 2rem; background: #fff8f0; border-radius: 10px; border-left: 5px solid #c8956d;">
+                <p style="font-style: italic; color: #8b6914;"><strong>Investment Policy:</strong> All coaching packages require full commitment and payment. Because transformation requires consistency and dedicated time together, refunds are not available. Your investment reflects my complete dedication to your growth journey.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <!-- Placeholder for your professional photo -->
+                    <div style="height: 400px; background: #6b7c6b; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
+                        Your Professional Photo Here
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2>Meet Kinky Tantrika</h2>
+                    <p>
+                        I'm here to help you fall deeply in love with who you are. As a certified Sex, Love & Relationship Coach trained by Layla Martin, I specialize in guiding individuals through profound self-discovery and authentic confidence building. Having worked intensively with 30+ carefully selected clients over 3 years, I'm highly selective about who I choose to work with to ensure the deepest possible transformation.
+                    </p>
+                    <p>
+                        My approach combines deep questioning, body awareness, breathwork, and energy work to help you heal old patterns and create the unshakeable self-love that transforms everything. Each client receives my complete dedication and personalized attention throughout their journey of becoming authentically confident and magnetic.
+                    </p>
+                    <p>
+                        Whether you're healing from past relationships, wanting to attract conscious partnership, or simply ready to love yourself fully, I create a safe, non-judgmental space for your authentic exploration and growth.
+                    </p>
+                    
+                    <div class="credentials">
+                        <h4>Credentials & Training</h4>
+                        <ul>
+                            <li>Certified Sex, Love & Relationship Coach (Layla Martin Institute)</li>
+                            <li>Licensed Massage Therapist & Reflexology Specialist</li>
+                            <li>Certified Energy Worker (Reiki & Advanced Healing Modalities)</li>
+                            <li>20+ Years Education & Curriculum Development</li>
+                            <li>30+ Deep Transformation Partnerships (Highly Selective Client Practice)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Transformation Stories</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 3rem;">
+                Real results from real people who chose to invest in their self-love journey
+            </p>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <h4>From Insecurity to Magnetic Confidence</h4>
+                    <p>
+                        "I came to Kinky Tantrika feeling lost after being fired from my job and struggling with dating. Through our 6 months together, I discovered deep confidence I never knew I had. I explored old wounds, found my voice, and completely transformed how I show up in the world. Now I have two amazing partners in a polyamorous relationship, I'm thriving professionally, and people are drawn to my energy in ways that never happened before. The sexual confidence and authentic self-love I've developed has changed everything."
+                    </p>
+                    <div class="client-name">- M., Business Professional</div>
+                </div>
+
+                <div class="testimonial">
+                    <h4>From Stuck to Powerfully Free</h4>
+                    <p>
+                        "Working with Kinky Tantrika gave me the courage to leave a marriage that wasn't serving me and discover who I really am. In 6 months, I found my strength, got back into fitness and hobbies I love, and learned to trust my instincts with dating. I can spot red flags immediately now and move on with love and confidence. The relationship skills I learned led me to an incredible partnership where we practice true intimacy and communicate beautifully. I finally know what it feels like to be completely myself and be loved for it."
+                    </p>
+                    <div class="client-name">- S., Creative Professional</div>
+                </div>
+
+                <div class="testimonial">
+                    <h4>Self-Love That Radiates</h4>
+                    <p>
+                        "The inner child work and body awareness techniques completely shifted how I see myself. I went from constant self-criticism to giving myself affirmations naturally throughout the day. The confidence and self-love I've developed affects every area of my life - work, friendships, dating, everything. I finally understand what it means to be enough exactly as I am."
+                    </p>
+                    <div class="client-name">- R., Entrepreneur</div>
+                </div>
+
+                <div class="testimonial">
+                    <h4>Authentic Communication Breakthrough</h4>
+                    <p>
+                        "Learning to feel sensations in my body and give them voice was life-changing. I used to let things build up until I exploded. Now I can communicate my true desires and boundaries in the moment with love and clarity. My relationships are deeper and more honest than ever before."
+                    </p>
+                    <div class="client-name">- T., Healthcare Professional</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer/Contact -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <h3>Kinky Tantrika Coaching</h3>
+                <p class="footer-tagline">
+                    "Transform your relationship with yourself, transform your life"
+                </p>
+                <div class="contact-info">
+                    <p>Ready to begin your transformation journey?</p>
+                    <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+                    <p>Schedule your free Discovery Session to explore if we're the perfect fit</p>
+                </div>
+                <a href="#" class="cta-button">Schedule Discovery Session</a>
+                <p style="margin-top: 2rem; font-size: 0.9rem; color: #999;">
+                    © 2024 Kinky Tantrika Coaching. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-on-scroll');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
